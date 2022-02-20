@@ -1,3 +1,17 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-box div,
+form {
+    border: 1px solid violet;
+    background-color: #eee;
+}
+
+
 body {
     background-color: #fdf5ed;
     height: 100%;
@@ -19,10 +33,107 @@ body {
 
 .form-box {
     flex: 1;
-    background-color: rgb(250, 117, 117);
+    /* background-color: rgb(250, 117, 117); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.form-box__logo {
+    justify-self: flex-start;
+    background-color: aquamarine;
+}
+
+.form-box__controls {
+    /* background-color: aquamarine; */
+
+
+    width: 65%;
+}
+
+.password__options {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-box__controls {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1em; */
+}
+
+.logo {
+    color: #ea5165;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.form-box__message {
+    margin-bottom: 50px;
+}
+
+.form-box__message .header {
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.form-box__message .description {
+    color: #999;
+}
+
+
+.form-box__controls input {
+    padding: 12px 8px;
+    border: 1px solid #ebeef0;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+input[type=checkbox] {
+    margin: 0;
+    width: auto;
+}
+
+button[type=submit] {
+    background-color: #679cd3;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+
+}
+
+button[type=submit]:hover {
+    background-color: #3168a3;
+    box-shadow: 0px 20px 25px -30px rgba(31, 68, 0, 0.75);
+    -webkit-box-shadow: 0px 20px 25px -30px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 20px 25px -30px rgba(0, 0, 0, 0.75);
+}
+
+.copyright {
+    opacity: 0.5;
+    font-size: 10px;
 }
 
 .image-box {
     flex: 1;
-    background-color: rgb(107, 107, 107);
+    overflow: hidden;
+}
+
+.image-box img {
+    height: 100%;
 }
