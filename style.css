@@ -5,21 +5,14 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.form-box div,
-form {
-    border: 1px solid violet;
-    background-color: #eee;
-}
-
-
 body {
     background-color: #fdf5ed;
     height: 100%;
 }
 
 .container {
-    width: 1120px;
-    height: 615px;
+    width: 1350px;
+    height: 720px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -39,18 +32,10 @@ body {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 30px 0;
-}
-
-.form-box__logo {
-    justify-self: flex-start;
-    background-color: aquamarine;
+    padding: 50px 25px;
 }
 
 .form-box__controls {
-    /* background-color: aquamarine; */
-
-
     width: 65%;
 }
 
@@ -69,7 +54,6 @@ form {
 .form-box__controls {
     display: flex;
     flex-direction: column;
-    /* gap: 1em; */
 }
 
 .logo {
@@ -90,20 +74,53 @@ form {
 
 .form-box__message .description {
     color: #999;
+    font-size: 12px;
 }
 
 
-.form-box__controls input {
-    padding: 12px 8px;
+
+.controls__input div {
+    width: 100%;
+    position: relative;
+}
+
+.controls__input .inputText {
+    font-size: 14px;
+    width: 100%;
+    height: 50px;
     border: 1px solid #ebeef0;
     border-radius: 5px;
-    width: 100%;
     margin-bottom: 5px;
+    padding: 12px 15px 0px;
+    outline: none;
 }
 
-input[type=checkbox] {
-    margin: 0;
-    width: auto;
+.floating-label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 15px;
+    transition: 0.2s ease all;
+    opacity: 0.75;
+
+}
+
+input:focus~.floating-label,
+input:not(:focus):valid~.floating-label {
+    top: 10px;
+    /* bottom: 10px; */
+    /* left: 5px; */
+    font-size: 10px;
+    /* opacity: 1; */
+
+}
+
+
+.option-remember {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 button[type=submit] {
